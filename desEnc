@@ -16,10 +16,11 @@ public class desEnc {
 
 	public static void main(String[] args) {
 		try {
-			InputStreamReader is = new InputStreamReader(System.in);
-                                                            BufferedReader br = new BufferedReader(is);
+			/*InputStreamReader is = new InputStreamReader(System.in);
+                        BufferedReader br = new BufferedReader(is);
 			System.out.println("Enter key");
-			String key = br.readLine();
+			String key = br.readLine(); */
+			String key = "revea1it"
 
 			FileInputStream fis = new FileInputStream("original.txt");
 			FileOutputStream fos = new FileOutputStream("encrypted.txt");
