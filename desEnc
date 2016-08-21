@@ -25,14 +25,11 @@ public class desEnc {
 			FileInputStream fis = new FileInputStream("original.txt");
 			FileOutputStream fos = new FileOutputStream("encrypted.txt");
 			encrypt(key, fis, fos);
-
 			
 		} catch (Throwable e) {
 			e.printStackTrace();
 		}
 	}
-
-
 
 	public static void encrypt(String key, InputStream is, OutputStream os) throws Throwable {
 
@@ -40,12 +37,10 @@ public class desEnc {
 		SecretKeyFactory skf = SecretKeyFactory.getInstance("DES");
 		SecretKey desKey = skf.generateSecret(dks);
 		Cipher cipher = Cipher.getInstance("DES");
-
 		
 			cipher.init(Cipher.ENCRYPT_MODE, desKey);
 			CipherInputStream cis = new CipherInputStream(is, cipher);
 			doCopy(cis, os);
-		
 	}
 
 	public static void doCopy(InputStream is, OutputStream os) throws IOException {
@@ -58,5 +53,4 @@ public class desEnc {
 		os.close();
 		is.close();
 	}
-
 }
